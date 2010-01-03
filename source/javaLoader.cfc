@@ -28,7 +28,7 @@
 	</cffunction>
 	
 	<cffunction name="createLoadPath" returntype="array" hint="I return an array of all the jars to load">
-		<cfargument name="loadPathsList" type="any" />
+		<cfargument name="loadPathsList" type="any" default="" />
 		
 		<cfscript>
 		    // create loadPath array
@@ -48,7 +48,7 @@
 		 	<cfset loadPaths[#i#] = dirPath & loadMe.Name[i] />
 		</cfloop>
 		
-		<cfloop list="#loadPathsList#" index="i">
+		<cfloop list="#arguments.loadPathsList#" index="i">
 			<!--- check if jar exists --->
 			<cfif fileExists(#i#)>
 		 		<cfset ArrayAppend(loadPaths, "#i#") />
