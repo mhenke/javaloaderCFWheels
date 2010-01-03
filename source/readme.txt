@@ -8,18 +8,17 @@ requires:
  
 TO USE
 1) Create a lib folder for your jar files under your webroot
- 
-Exampe Of Directory Layout:
-webroot
-==index.cfm
-==IsapiRewrite4.ini
-==Application.cfc
-====wheels
-====views
-====models
-====events
-====controllers
-====lib
+	Exampe Of Directory Layout:
+	webroot
+	==index.cfm
+	==IsapiRewrite4.ini
+	==Application.cfc
+	====wheels
+	====views
+	====models
+	====events
+	====controllers
+	====lib
 
 2) Place any jars you wish to access in the lib folder you added in step 1.
 
@@ -35,8 +34,9 @@ webroot
 
 You should be good to go now and able to access the jar.
 
+EXAMPLES OF USE
 <!--- example of creating java object--->
-jTidy = application.javaloader.create("org.w3c.tidy.Tidy").init();
+<cfset jTidy = application.javaloader.create("org.w3c.tidy.Tidy").init() />
  
 ADDITIONAL FOR DEMO 
 Unzip the Demo-x.x.zip file into CFWheel's webroot.

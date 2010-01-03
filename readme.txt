@@ -1,4 +1,4 @@
-see readme @ http://github.com/mhenke/javaloaderCFWheels/blob/master/source/readme.txt
+see readme.txt @ http://github.com/mhenke/javaloaderCFWheels/blob/master/source/readme.txt
 
 Or
 
