@@ -1,0 +1,1 @@
+This license is for the Javaloader Wheels plugin is  Creative Commons Attribution 3.0 Unported Licens http://creativecommons.org/licenses/by/3.0/ but doesn't supercede or infringe upon any other third party licenses included.

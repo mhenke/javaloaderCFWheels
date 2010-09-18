@@ -1,0 +1,9 @@
+ACKNOWLEGEMENTS
+===============
+Thanks to Mark Mandel for JavaLoader. http://www.compoundtheory.com/
+
+Javaloader
+============
+please refer to the documentation and license of Javaloader.
+http://javaloader.riaforge.org/
+http://www.compoundtheory.com/javaloader/docs/

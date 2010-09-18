@@ -1,10 +1,10 @@
-CFWheels with JavaLoader v0.5
+CFWheels with JavaLoader v1
 
 http://javaloader.riaforge.org/
 http://github.com/mhenke/javaloaderCFWheels
 
 requires:
-# Wheels 1.0
+# Wheels 1.0.5
  
 TO USE
 1) Create a lib folder for your jar files under your webroot
