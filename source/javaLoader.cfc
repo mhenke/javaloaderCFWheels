@@ -1,7 +1,6 @@
 <cfcomponent output="false">
-	 <cffunction name="init">
-		<cfset this.version = "1.0.0">
-		
+	<cffunction name="init">
+		<cfset this.version = "1.0,1.0.1,1.0.2,1.0.3,1.0.4,1.0.5,1.1,1.1.3,1.1.4,1.1.5,1.1.6,1.1.7,1.1.8">
 		<cfreturn this>
 	</cffunction>
 	
@@ -20,7 +19,7 @@
 		<cfargument name="loadPaths" required="true" type="array" />
 		
 		<cfscript>
-			var javaloader = createObject("component", "plugins.javaloader.JavaLoader.Javaloader").init(arguments.loadPaths, 'true');
+			var javaloader = createObject("component", "plugins.javaLoader.javaLoader.javaLoader").init(arguments.loadPaths, 'true');
 		</cfscript>
 		
 		<cfreturn javaloader />
@@ -28,16 +27,15 @@
 	
 	<cffunction name="createLoadPath" returntype="array" hint="I return an array of all the jars to load">
 		<cfargument name="loadPathsArray" type="array" default="" />
-		
+
 		<cfscript>
 			var loadMe = "";
 			var i = "";
 		    // create loadPath array
 			var loadPaths = ArrayNew(1); 
-			var dirPath = ReturnWebRootTranslated() & "/lib/";
-			var proxyJar = ReturnWebRootTranslated() & "/plugins/javaloader/javaLoader/support/cfcdynamicproxy/lib/cfcdynamicproxy.jar";
+			var dirPath = expandPath("lib");
+			var proxyJar = expandPath("plugins/javaLoader") & "/javaLoader/support/cfcdynamicproxy/lib/cfcdynamicproxy.jar";
 		</cfscript>
-		
 		<!--- read directory for jar files --->
 		<cfdirectory 
 		   action = "list"
@@ -47,7 +45,7 @@
 		 
 		<!--- add default jars in lib folder --->
 		<cfloop index="i" from="1" to="#loadMe.RecordCount#">
-		 	<cfset loadPaths[#i#] = dirPath & loadMe.Name[i] />
+		 	<cfset loadPaths[#i#] = dirPath & "/" & loadMe.Name[i] />
 		</cfloop>
 		
 		<!--- add explicitily set jars --->
